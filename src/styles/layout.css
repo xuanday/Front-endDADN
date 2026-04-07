@@ -184,4 +184,22 @@
   .header-actions {
     gap: var(--spacing-md);
   }
+  .sidebar-icon {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo-img {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 6px; 
+}
+.logo-text {
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--primary-color);
+}
 }

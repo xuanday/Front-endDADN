@@ -1,5 +1,15 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { LogOut, Menu, Bell } from 'lucide-react'
+import logo from "/logo.jpg"
+import {
+  LayoutDashboard,
+  Settings,
+  Cpu,
+  AlertTriangle,
+  BarChart3,
+  Users,
+  Wrench
+} from 'lucide-react'
 import '../styles/layout.css'
 
 export default function MainLayout({ children }) {
@@ -14,24 +24,25 @@ export default function MainLayout({ children }) {
   }
 
   const navItems = [
-    { path: '/dashboard', label: 'Dashboard', icon: '📊' },
-    { path: '/devices', label: 'Thiết bị', icon: '⚙️' },
-    { path: '/sensors', label: 'Cảm biến', icon: '📡' },
-    { path: '/alerts', label: 'Cảnh báo', icon: '🚨' },
-    { path: '/reports', label: 'Báo cáo', icon: '📈' },
-  ]
+  { path: '/dashboard', label: 'Dashboard', icon: <LayoutDashboard /> },
+  { path: '/devices', label: 'Thiết bị', icon: <Cpu /> },
+  { path: '/sensors', label: 'Cảm biến', icon: <Settings /> },
+  { path: '/alerts', label: 'Cảnh báo', icon: <AlertTriangle /> },
+  { path: '/reports', label: 'Báo cáo', icon: <BarChart3 /> },
+]
 
   const adminItems = [
-    { path: '/admin/users', label: 'Người dùng', icon: '👥' },
-    { path: '/admin/settings', label: 'Cài đặt', icon: '⚡' },
-  ]
+  { path: '/admin/users', label: 'Người dùng', icon: <Users /> },
+  { path: '/admin/settings', label: 'Cài đặt', icon: <Wrench /> },
+]
 
   return (
     <div className="layout">
       {/* Header */}
       <header className="layout-header">
         <div className="header-logo">
-          🌾 Smart Farm
+            <img src={logo} alt="logo" style={{ width: '40px', height: '40px' }} />
+            <span className="logo-text">Smart Farm</span>
         </div>
         <div className="header-actions">
           <button className="header-action-btn">
@@ -67,7 +78,7 @@ export default function MainLayout({ children }) {
                   isActive(item.path) ? 'active' : ''
                 }`}
               >
-                <span style={{ fontSize: '20px' }}>{item.icon}</span>
+                <span className="sidebar-icon">{item.icon}</span>
                 <span>{item.label}</span>
               </Link>
             </li>
@@ -85,7 +96,7 @@ export default function MainLayout({ children }) {
                     isActive(item.path) ? 'active' : ''
                   }`}
                 >
-                  <span style={{ fontSize: '20px' }}>{item.icon}</span>
+                  <span className="sidebar-icon">{item.icon}</span>
                   <span>{item.label}</span>
                 </Link>
               </li>
