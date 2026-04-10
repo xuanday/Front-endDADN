@@ -55,7 +55,7 @@ const SensorChart = () => {
     <div className="card">
       <div className="card-header">
         <div className="card-title">
-          <span>📊</span>
+          <span></span>
           Dữ liệu Cảm biến Thời gian Thực
         </div>
       </div>

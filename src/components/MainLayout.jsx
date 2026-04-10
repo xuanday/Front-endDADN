@@ -48,15 +48,22 @@ export default function MainLayout({ children }) {
           <button className="header-action-btn">
             <Bell />
           </button>
-          <div className="header-user">
-            <div className="header-user-avatar">AD</div>
-            <div>
-              <div style={{ fontSize: '14px', fontWeight: '600' }}>Admin</div>
-              <div style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>
-                Quản lý
+          <button 
+            className="header-action-btn" 
+            onClick={() => navigate('/profile')}
+            title="Thông tin cá nhân"
+            style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px' }}
+          >
+            <div className="header-user">
+              <div className="header-user-avatar">AD</div>
+              <div>
+                <div style={{ fontSize: '14px', fontWeight: '600' }}>Admin</div>
+                <div style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>
+                  Quản lý
+                </div>
               </div>
             </div>
-          </div>
+          </button>
           <button
             className="header-action-btn"
             onClick={handleLogout}

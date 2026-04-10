@@ -3,6 +3,9 @@ import MainLayout from './components/MainLayout'
 import ProtectedRoute from './components/ProtectedRoute'
 import Dashboard from './pages/Dashboard'
 import Login from './pages/Login'
+import FarmManagement from './pages/FarmManagement'
+import ReportManagement from './pages/report'
+import UserProfile from './pages/UserProfile'
 import './styles/theme.css'
 import './styles/components.css'
 import './styles/layout.css'
@@ -74,10 +77,7 @@ function App() {
           element={
             <ProtectedRoute>
               <MainLayout>
-                <div className="card">
-                  <h2>Mùa vụ</h2>
-                  <p>Trang này sẽ được phát triển sớm...</p>
-                </div>
+                <FarmManagement />
               </MainLayout>
             </ProtectedRoute>
           }
@@ -88,10 +88,18 @@ function App() {
           element={
             <ProtectedRoute>
               <MainLayout>
-                <div className="card">
-                  <h2>📈 Báo cáo</h2>
-                  <p>Trang này sẽ được phát triển sớm...</p>
-                </div>
+                <ReportManagement></ReportManagement>
+              </MainLayout>
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/profile"
+          element={
+            <ProtectedRoute>
+              <MainLayout>
+                <UserProfile />
               </MainLayout>
             </ProtectedRoute>
           }
@@ -102,10 +110,7 @@ function App() {
           element={
             <ProtectedRoute>
               <MainLayout>
-                <div className="card">
-                  <h2>Người dùng</h2>
-                  <p>Trang này sẽ được phát triển sớm...</p>
-                </div>
+               <UserProfile></UserProfile>
               </MainLayout>
             </ProtectedRoute>
           }
