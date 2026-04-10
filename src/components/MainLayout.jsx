@@ -3,12 +3,12 @@ import { LogOut, Menu, Bell } from 'lucide-react'
 import logo from "/logo.jpg"
 import {
   LayoutDashboard,
-  Settings,
+  Activity,
   Cpu,
-  AlertTriangle,
+  Zap,
   BarChart3,
   Users,
-  Wrench
+  Sprout
 } from 'lucide-react'
 import '../styles/layout.css'
 
@@ -25,15 +25,15 @@ export default function MainLayout({ children }) {
 
   const navItems = [
   { path: '/dashboard', label: 'Dashboard', icon: <LayoutDashboard /> },
+  { path: '/monitoring', label: 'Giám sát', icon: <Activity /> },
   { path: '/devices', label: 'Thiết bị', icon: <Cpu /> },
-  { path: '/sensors', label: 'Cảm biến', icon: <Settings /> },
-  { path: '/alerts', label: 'Cảnh báo', icon: <AlertTriangle /> },
+  { path: '/automation', label: 'Tự động hóa', icon: <Zap /> },
+  { path: '/farm', label: 'Mùa vụ', icon: <Sprout /> },
   { path: '/reports', label: 'Báo cáo', icon: <BarChart3 /> },
 ]
 
   const adminItems = [
   { path: '/admin/users', label: 'Người dùng', icon: <Users /> },
-  { path: '/admin/settings', label: 'Cài đặt', icon: <Wrench /> },
 ]
 
   return (

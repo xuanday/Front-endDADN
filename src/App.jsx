@@ -28,12 +28,26 @@ function App() {
 
         {/* Placeholder routes for future pages */}
         <Route
+          path="/monitoring"
+          element={
+            <ProtectedRoute>
+              <MainLayout>
+                <div className="card">
+                  <h2>Giám sát</h2>
+                  <p>Trang này sẽ được phát triển sớm...</p>
+                </div>
+              </MainLayout>
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
           path="/devices"
           element={
             <ProtectedRoute>
               <MainLayout>
                 <div className="card">
-                  <h2> Quản lý Thiết bị</h2>
+                  <h2>Thiết bị</h2>
                   <p>Trang này sẽ được phát triển sớm...</p>
                 </div>
               </MainLayout>
@@ -42,12 +56,12 @@ function App() {
         />
 
         <Route
-          path="/sensors"
+          path="/automation"
           element={
             <ProtectedRoute>
               <MainLayout>
                 <div className="card">
-                  <h2>📡 Quản lý Cảm biến</h2>
+                  <h2>Tự động hóa</h2>
                   <p>Trang này sẽ được phát triển sớm...</p>
                 </div>
               </MainLayout>
@@ -56,12 +70,12 @@ function App() {
         />
 
         <Route
-          path="/alerts"
+          path="/farm"
           element={
             <ProtectedRoute>
               <MainLayout>
                 <div className="card">
-                  <h2>🚨 Cảnh báo</h2>
+                  <h2>Mùa vụ</h2>
                   <p>Trang này sẽ được phát triển sớm...</p>
                 </div>
               </MainLayout>
@@ -89,21 +103,7 @@ function App() {
             <ProtectedRoute>
               <MainLayout>
                 <div className="card">
-                  <h2>👥 Quản lý Người dùng</h2>
-                  <p>Trang này sẽ được phát triển sớm...</p>
-                </div>
-              </MainLayout>
-            </ProtectedRoute>
-          }
-        />
-
-        <Route
-          path="/admin/settings"
-          element={
-            <ProtectedRoute>
-              <MainLayout>
-                <div className="card">
-                  <h2>⚡ Cài đặt Hệ thống</h2>
+                  <h2>Người dùng</h2>
                   <p>Trang này sẽ được phát triển sớm...</p>
                 </div>
               </MainLayout>

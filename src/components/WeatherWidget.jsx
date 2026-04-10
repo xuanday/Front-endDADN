@@ -17,7 +17,7 @@ const WeatherWidget = () => {
     forecast: [
       { day: 'Hôm nay', high: 32, low: 24, condition: '☀️ Nắng' },
       { day: 'Ngày mai', high: 30, low: 23, condition: '⛅ Hửng nắng' },
-      { day: 'Kiên', high: 28, low: 22, condition: '🌧️ Mưa' },
+      { day: 'Ngày kia', high: 28, low: 22, condition: '🌧️ Mưa' },
     ],
   }
 
