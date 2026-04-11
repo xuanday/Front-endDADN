@@ -6,6 +6,9 @@ import Login from './pages/Login'
 import FarmManagement from './pages/FarmManagement'
 import ReportManagement from './pages/report'
 import UserProfile from './pages/UserProfile'
+import Monitoring from "./pages/Monitoring"
+import Devices from "./pages/Devices"
+import Automation from "./pages/Automation"
 import './styles/theme.css'
 import './styles/components.css'
 import './styles/layout.css'
@@ -35,10 +38,7 @@ function App() {
           element={
             <ProtectedRoute>
               <MainLayout>
-                <div className="card">
-                  <h2>Giám sát</h2>
-                  <p>Trang này sẽ được phát triển sớm...</p>
-                </div>
+                <Monitoring />
               </MainLayout>
             </ProtectedRoute>
           }
@@ -49,10 +49,7 @@ function App() {
           element={
             <ProtectedRoute>
               <MainLayout>
-                <div className="card">
-                  <h2>Thiết bị</h2>
-                  <p>Trang này sẽ được phát triển sớm...</p>
-                </div>
+                <Devices />
               </MainLayout>
             </ProtectedRoute>
           }
@@ -63,10 +60,7 @@ function App() {
           element={
             <ProtectedRoute>
               <MainLayout>
-                <div className="card">
-                  <h2>Tự động hóa</h2>
-                  <p>Trang này sẽ được phát triển sớm...</p>
-                </div>
+                <Automation />
               </MainLayout>
             </ProtectedRoute>
           }
