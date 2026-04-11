@@ -1,5 +1,29 @@
 import DeviceStatus from '../components/DeviceStatus'
+import DeviceCard from '../components/DeviceCard'
 
+const deviceList = [
+  {
+    id: 1,
+    name: 'Máy bơm nước 1',
+    type: 'pump',
+    status: 'on',
+    location: 'Khu A'
+  },
+  {
+    id: 2,
+    name: 'Đèn LED nhà kính',
+    type: 'light',
+    status: 'off',
+    location: 'Nhà kính 1'
+  },
+  {
+    id: 3,
+    name: 'Cảm biến nhiệt độ',
+    type: 'sensor',
+    status: 'active',
+    location: 'Khu B'
+  }
+]
 const Devices = () => {
   return (
     <div className="p-6 space-y-6 bg-[#020617] min-h-screen text-white">
@@ -23,7 +47,6 @@ const Devices = () => {
       <div className="text-center text-gray-500 text-sm">
         Cập nhật realtime • {new Date().toLocaleString('vi-VN')}
       </div>
-
     </div>
   )
 }
