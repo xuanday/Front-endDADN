@@ -16,7 +16,13 @@ const AutomationItem = ({ item, onToggle, onDelete }) => {
       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
         <Zap size={20} style={{ color: item.color }} />
 
-        <div className={`badge ${isActive ? 'badge-success' : 'badge-warning'}`}>
+        <div
+          style={{
+            fontSize: 11,
+            color: isActive ? '#059669' : '#f59e0b',
+            fontWeight: 600,
+          }}
+        >
           {isActive ? 'ĐANG HOẠT ĐỘNG' : 'TẠM DỪNG'}
         </div>
       </div>
@@ -25,10 +31,26 @@ const AutomationItem = ({ item, onToggle, onDelete }) => {
       <div style={{ marginTop: 8 }}>
         <div style={{ fontWeight: 600 }}>{item.name}</div>
 
-        <div style={{ fontSize: 12, color: 'var(--text-secondary)' }}>
-          <b>Nếu:</b> {item.condition}
+        {/* TYPE */}
+        <div style={{ fontSize: 11, color: 'var(--text-tertiary)' }}>
+          {item.type === 'threshold' && '🔁 Theo ngưỡng'}
+          {item.type === 'schedule' && '⏰ Theo thời gian'}
         </div>
 
+        {/* CONDITION */}
+        <div style={{ fontSize: 12, color: 'var(--text-secondary)' }}>
+          {item.type === 'threshold' ? (
+            <>
+              <b>Nếu:</b> {item.condition}
+            </>
+          ) : (
+            <>
+              <b>Thời gian:</b> {item.condition}
+            </>
+          )}
+        </div>
+
+        {/* ACTION */}
         <div style={{ fontSize: 12, color: 'var(--text-secondary)' }}>
           <b>Thì:</b> {item.action}
         </div>
@@ -48,7 +70,7 @@ const AutomationItem = ({ item, onToggle, onDelete }) => {
         {item.lastRun}
       </div>
 
-      {/* ACTION */}
+      {/* ACTION BUTTON */}
       <div style={{ display: 'flex', gap: 8, marginTop: 10 }}>
         <button
           className={`btn btn-sm ${isActive ? 'btn-outline' : 'btn-primary'}`}
@@ -58,7 +80,10 @@ const AutomationItem = ({ item, onToggle, onDelete }) => {
           {isActive ? 'Tạm dừng' : 'Chạy'}
         </button>
 
-        <button className="btn btn-outline btn-sm" onClick={() => onDelete(item.id)}>
+        <button
+          className="btn btn-outline btn-sm"
+          onClick={() => onDelete(item.id)}
+        >
           <Trash2 size={14} />
         </button>
       </div>
