@@ -175,11 +175,15 @@ const UserProfile = () => {
                     fontWeight: 600,
                     fontSize: '13px',
                     transition: 'all 0.2s',
+                    display: 'flex',          
+                    alignItems: 'center',     
+                    justifyContent: 'center',
+                    gap: '6px'                
                   }}
                   onMouseEnter={(e) => (e.currentTarget.style.background = '#2563eb')}
                   onMouseLeave={(e) => (e.currentTarget.style.background = '#3b82f6')}
                 >
-                  ✏️ Chỉnh sửa
+                  <RefreshCw size={ 15} /> Chỉnh sửa
                 </button>
               )}
             </div>
