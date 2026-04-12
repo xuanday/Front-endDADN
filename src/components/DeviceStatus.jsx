@@ -3,16 +3,12 @@ import { useState } from 'react'
 
 const DeviceStatus = () => {
   const [devices, setDevices] = useState([
-    { id: 1, name: 'Máy bơm 1', type: 'pump', status: 'ON', icon: Droplets, power: 2500, color: '#3b82f6' },
-    { id: 2, name: 'Máy bơm 2', type: 'pump', status: 'OFF', icon: Droplets, power: 0, color: '#3b82f6' },
+    { id: 1, name: 'Máy bơm ', type: 'pump', status: 'ON', icon: Droplets, power: 2500, color: '#3b82f6' },
+   
+    { id: 2, name: 'Quạt ', type: 'fan', status: 'OFF', icon: Wind, power: 0, color: '#10b981' },
 
-    { id: 3, name: 'Quạt 1', type: 'fan', status: 'ON', icon: Wind, power: 1200, color: '#10b981' },
-    { id: 4, name: 'Quạt 2', type: 'fan', status: 'OFF', icon: Wind, power: 0, color: '#10b981' },
-
-    { id: 5, name: 'Đèn 1', type: 'light', status: 'OFF', icon: Lightbulb, power: 0, color: '#f59e0b' },
-    { id: 6, name: 'Đèn 2', type: 'light', status: 'ON', icon: Lightbulb, power: 800, color: '#f59e0b' },
-
-    { id: 7, name: 'Máy sát trùng 1', type: 'sterilizer', status: 'OFF', icon: Zap, power: 0, color: '#ef4444' },
+    { id: 3, name: 'Đèn ', type: 'light', status: 'OFF', icon: Lightbulb, power: 0, color: '#f59e0b' },
+  
   ])
 
   const toggleDevice = (id) => {
